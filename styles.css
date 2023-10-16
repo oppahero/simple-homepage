@@ -1,15 +1,152 @@
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+:root {
+  --bg-color: #f2f9fe;
+  --blue: #2a4dd0;
+  --white: #ffffff;
+  --check-color: #4ca154;
+  --title-color: #223344;
+  --text-color: #909193;
+  --theme-color: #111729;
+  --title-font-size: 3.75rem;
+  --body-font-size: 1.125rem;
+  --button-font-size: 1rem;
+  --smallText-font-size: 0.875rem;
 }
 
-body{
-    min-width: 100vh;
-    font-family: 'Poppins', sans-serif;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-li{
-    list-style: none;
-    
+body {
+  max-width: 1135px;
+  min-height: 100vh;
+  margin: 29px auto;
+  font-family: "Poppins", sans-serif;
+  font-size: var(--body-font-size);
+  color: var(--text-color);
+  background-color: var(--bg-color);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+a {
+  color: var(--blue);
+  font-weight: 700;
+}
+
+main {
+  margin: 94px 0;
+  display: flex;
+}
+
+li {
+  list-style: none;
+}
+
+h1 {
+  font-size: var(--title-font-size);
+}
+
+h1,
+.container-text__slogan {
+  color: var(--title-color);
+}
+
+.nav__li,
+.container-text__slogan,
+.container-text__checks {
+  font-size: var(--smallText-font-size);
+}
+
+.container-text__slogan {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+
+.container-text,
+.hero-image {
+  width: 50%;
+}
+
+.container-text__title {
+  margin-right: 110px;
+}
+
+.container-text__description {
+  line-height: 25px;
+  margin-bottom: 25px;
+  width: 450px;
+}
+
+.container-text__actions {
+  margin-bottom: 45px;
+}
+
+.nav__ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav__li a{
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+a.active{
+    color: var(--title-color);
+}
+
+.container-text__actions__button {
+  width: 180px;
+  padding: 20px 34px;
+  font-size: 1rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 15px;
+  color: var(--white);
+  background-color: var(--blue);
+  margin-right: 32px;
+}
+
+.container-text__checks ul{
+    display: flex;
+    align-items: center;
+}
+
+.container-text__checks li{
+    margin-left: 8px ;
+    margin-right: 20px;
+}
+
+@media screen and (max-width: 1024px) {
+  main {
+    flex-direction: column;
+    align-items: center;
+    row-gap: 80px;
+  }
+
+  .container-text {
+    width: 80%;
+  }
+
+  .hero-image {
+    order: -1;
+    /* width: 58%; */
+    width: 558px;
+  }
+
+  body {
+    max-width: 961px;
+  }
+
+  .container-text__title {
+    margin-right: 0;
+  }
 }
