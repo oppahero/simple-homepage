@@ -1,11 +1,10 @@
 :root {
   --bg-color: #f2f9fe;
+  --bg-dark-color: #111729;
+  --primary-color: #223344;
   --blue: #2a4dd0;
-  --white: #ffffff;
-  --check-color: #4ca154;
-  --title-color: #223344;
-  --text-color: #909193;
-  --theme-color: #111729;
+  --green: #4ca154;
+  --smoke: #909193;
   --title-font-size: 3.75rem;
   --body-font-size: 1.125rem;
   --button-font-size: 1rem;
@@ -20,15 +19,16 @@
 
 body {
   max-width: 1135px;
-  min-height: 100vh;
+  /* min-height: 100vh; */
   margin: 29px auto;
   font-family: "Poppins", sans-serif;
   font-size: var(--body-font-size);
-  color: var(--text-color);
+  color: var(--smoke);
   background-color: var(--bg-color);
 }
 
 nav {
+  height: 26px;
   display: flex;
   justify-content: space-between;
 }
@@ -39,7 +39,7 @@ a {
 }
 
 main {
-  margin: 94px 0;
+  margin: 90px auto;
   display: flex;
 }
 
@@ -47,13 +47,23 @@ li {
   list-style: none;
 }
 
+button {
+  cursor: pointer;
+}
+
 h1 {
   font-size: var(--title-font-size);
+  line-height: 5.5rem;
+  margin: 20px 0 38px 0;
+}
+
+.dark {
+  background-color: var(--bg-dark-color);
 }
 
 h1,
 .container-text__slogan {
-  color: var(--title-color);
+  color: var(--primary-color);
 }
 
 .nav__li,
@@ -67,10 +77,25 @@ h1,
   text-transform: uppercase;
 }
 
+/* .logo img {
+  width: 144px;
+  height: 26px;
+} */
+
+.logo svg {
+  width: 144px;
+  height: 26px;
+  fill: var(--primary-color);
+}
 
 .container-text,
 .hero-image {
   width: 50%;
+  height: 50%;
+}
+
+.hero-image {
+  align-self: end;
 }
 
 .container-text__title {
@@ -84,23 +109,25 @@ h1,
 }
 
 .container-text__actions {
-  margin-bottom: 45px;
+  margin-bottom: 40px;
 }
 
 .nav__ul {
+  height: 26px;
+  width: 65%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
 }
 
-.nav__li a{
-    font-weight: 700;
-    text-decoration: none;
-    color: var(--text-color);
+.nav__li a {
+  margin-right: 40px;
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--smoke);
 }
 
-a.active{
-    color: var(--title-color);
+a.active {
+  color: var(--primary-color);
 }
 
 .container-text__actions__button {
@@ -110,19 +137,61 @@ a.active{
   font-weight: 500;
   border: none;
   border-radius: 15px;
-  color: var(--white);
+  color: #FFF;
   background-color: var(--blue);
   margin-right: 32px;
 }
 
-.container-text__checks ul{
-    display: flex;
-    align-items: center;
+.container-text__checks ul {
+  display: flex;
+  align-items: center;
 }
 
-.container-text__checks li{
-    margin-left: 8px ;
-    margin-right: 20px;
+.container-text__checks li {
+  margin-left: 8px;
+  margin-right: 20px;
+}
+
+.mode {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 50px;
+  height: inherit;
+  margin-left: auto;
+  border: none;
+  border-radius: 25px;
+  background-color: var(--primary-color);
+}
+
+.button-icon {
+  width: 22px;
+  height: 22px;
+  background-color: var(--bg-color);
+  border-radius: 50%;
+  transition: background-color 0.8s ease-out;
+}
+
+/* Dark mode */
+.dark .mode {
+  background: var(--primary-color);
+}
+
+.dark h1,
+.dark nav a.active,
+.dark .container-text__slogan,
+.dark .container-text__title {
+  color: #fff;
+}
+
+.dark path:nth-child(3),
+.dark path:nth-child(4),
+.dark path:nth-child(5),
+.dark path:nth-child(6),
+.dark path:nth-child(7),
+.dark path:nth-child(8),
+.dark path:nth-child(9) {
+  fill: #fff;
 }
 
 @media screen and (max-width: 1024px) {
@@ -138,8 +207,9 @@ a.active{
 
   .hero-image {
     order: -1;
-    /* width: 58%; */
-    width: 558px;
+    /* width: 558px; */
+    width: 70%;
+    align-self: center;
   }
 
   body {
