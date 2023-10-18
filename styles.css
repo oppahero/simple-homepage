@@ -15,7 +15,6 @@
 
 body {
   max-width: 1185px;
-  /* min-width: 492px; */
   min-width: 375px;
   margin: 29px auto;
   padding: 0 24px;
@@ -63,7 +62,6 @@ nav {
 }
 
 .container-text {
-  /* width: 80%; */
   width: auto;
 }
 
@@ -77,7 +75,6 @@ nav {
   text-transform: uppercase;
 }
 
-/* .nav__li, */
 .container-text__slogan,
 .container-text__checks {
   font-size: 0.875rem;
@@ -100,6 +97,10 @@ nav {
   margin-right: 25px;
   border: none;
   border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
   font-weight: 500;
   color: #fff;
   background-color: var(--blue);
@@ -145,13 +146,19 @@ nav {
   top: 0;
   right: 0;
   width: 424px;
-  /* height: 26px;
-  width: 65%;
-  display: flex;
-  align-items: center; */
   text-align: center;
+
   transform: translateX(424px);
-  transition: transform 0.5s ease-in
+  -webkit-transform: translateX(424px);
+  -moz-transform: translateX(424px);
+  -ms-transform: translateX(424px);
+  -o-transform: translateX(424px);
+
+  transition: transform 0.5s ease-in;
+  -webkit-transition: transform 0.5s ease-in;
+  -moz-transition: transform 0.5s ease-in;
+  -ms-transition: transform 0.5s ease-in;
+  -o-transition: transform 0.5s ease-in;
 }
 
 .nav__li {
@@ -160,7 +167,6 @@ nav {
 }
 
 .nav__li a {
-  /* margin-right: 40px; */
   font-weight: 700;
   text-decoration: none;
   color: var(--smoke);
@@ -183,6 +189,10 @@ a.active {
   width: 24px;
   height: 3px;
   border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
   background-color: var(--primary-color);
 }
 
@@ -192,23 +202,42 @@ a.active {
   align-items: center;
   width: 50px;
   height: inherit;
-  /* margin-left: auto; */
   margin: 0 auto;
   border: none;
   border-radius: 25px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
   background-color: var(--primary-color);
 }
 
-.mode--activate {
+.mode img {
+  width: 18px;
+  height: 18px;
+  filter: invert(100%) hue-rotate(90rad);
+  -webkit-filter: invert(100%) hue-rotate(90rad);
+}
+
+.mode .mode--activate {
   width: 22px;
   height: 22px;
   background-color: var(--bg-color);
   border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
   transition: background-color 0.8s ease-out;
+  -webkit-transition: background-color 0.8s ease-out;
+  -moz-transition: background-color 0.8s ease-out;
+  -ms-transition: background-color 0.8s ease-out;
+  -o-transition: background-color 0.8s ease-out;
+  filter: none;
+  -webkit-filter: none;
 }
 
 /* Change colors for Dark mode */
-
 .dark .mode,
 .dark .nav__ul {
   background: var(--primary-color);
@@ -216,17 +245,14 @@ a.active {
 .dark .mode {
   background: var(--bg-dark-color);
 }
-
 .dark .container-text__slogan,
 .dark .close {
   color: #fff;
 }
-
 .dark nav a.active,
 .dark .container-text__title {
   color: var(--bg-color);
 }
-
 .dark path:nth-child(3),
 .dark path:nth-child(4),
 .dark path:nth-child(5),
@@ -236,7 +262,6 @@ a.active {
 .dark path:nth-child(9) {
   fill: #fff;
 }
-
 .dark .menu {
   background: var(--bg-dark-color);
 }
@@ -259,27 +284,22 @@ a.active {
     flex-direction: row;
     align-items: center;
   }
-
   .container-text,
   .hero-image {
     width: 50%;
     height: 50%;
   }
-
   .hero-image {
     order: 1;
     align-self: end;
   }
-
   .container-text__title {
     margin-right: 110px;
   }
-
   .menu,
   .close {
     display: none;
   }
-
   .nav__ul {
     height: 26px;
     width: 65%;
@@ -288,23 +308,23 @@ a.active {
     background-color: transparent;
     min-height: fit-content;
     position: static;
-    transform: none;
     overflow: hidden;
+    transform: none;
+    -webkit-transform: none;
+    -moz-transform: none;
+    -ms-transform: none;
+    -o-transform: none;
   }
-
   .nav__li {
     font-size: 0.875rem;
     margin: 0;
   }
-
   .nav__li a {
     margin-right: 40px;
   }
-
   .mode {
     margin: 0 0 0 auto;
   }
-
   /* Change colors for Dark mode */
   .dark .nav__ul {
     background: transparent;
