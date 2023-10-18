@@ -172,7 +172,8 @@ nav {
   color: var(--smoke);
 }
 
-a.active {
+a.active,
+.nav__li a:hover {
   color: var(--primary-color);
 }
 
