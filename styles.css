@@ -77,7 +77,7 @@ nav {
   text-transform: uppercase;
 }
 
-.nav__li,
+/* .nav__li, */
 .container-text__slogan,
 .container-text__checks {
   font-size: 0.875rem;
@@ -127,15 +127,40 @@ nav {
   fill: var(--primary-color);
 }
 
+.close {
+  display: block;
+  text-align: end;
+  font-size: 17px;
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-bottom: 56px;
+  cursor: pointer;
+}
+
 .nav__ul {
-  height: 26px;
+  padding: 28px;
+  background-color: #fff;
+  min-height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 424px;
+  /* height: 26px;
   width: 65%;
   display: flex;
-  align-items: center;
+  align-items: center; */
+  text-align: center;
+  transform: translateX(424px);
+  transition: transform 0.5s ease-in
+}
+
+.nav__li {
+  font-size: 2rem;
+  margin-bottom: 60px;
 }
 
 .nav__li a {
-  margin-right: 40px;
+  /* margin-right: 40px; */
   font-weight: 700;
   text-decoration: none;
   color: var(--smoke);
@@ -167,7 +192,8 @@ a.active {
   align-items: center;
   width: 50px;
   height: inherit;
-  margin-left: auto;
+  /* margin-left: auto; */
+  margin: 0 auto;
   border: none;
   border-radius: 25px;
   background-color: var(--primary-color);
@@ -183,11 +209,16 @@ a.active {
 
 /* Change colors for Dark mode */
 
-.dark .mode {
+.dark .mode,
+.dark .nav__ul {
   background: var(--primary-color);
 }
+.dark .mode {
+  background: var(--bg-dark-color);
+}
 
-.dark .container-text__slogan {
+.dark .container-text__slogan,
+.dark .close {
   color: #fff;
 }
 
@@ -244,7 +275,40 @@ a.active {
     margin-right: 110px;
   }
 
-  .menu {
+  .menu,
+  .close {
     display: none;
+  }
+
+  .nav__ul {
+    height: 26px;
+    width: 65%;
+    display: flex;
+    padding: 0;
+    background-color: transparent;
+    min-height: fit-content;
+    position: static;
+    transform: none;
+  }
+
+  .nav__li {
+    font-size: 0.875rem;
+    margin: 0;
+  }
+
+  .nav__li a {
+    margin-right: 40px;
+  }
+
+  .mode {
+    margin: 0 0 0 auto;
+  }
+
+  /* Change colors for Dark mode */
+  .dark .nav__ul {
+    background: transparent;
+  }
+  .dark .mode {
+    background: var(--primary-color);
   }
 }
