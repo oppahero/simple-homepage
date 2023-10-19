@@ -35,7 +35,6 @@ li {
 
 button {
   cursor: pointer;
-  height: 26px;
 }
 
 h1 {
@@ -203,7 +202,7 @@ a.active,
   justify-content: space-evenly;
   align-items: center;
   width: 50px;
-  height: inherit;
+  height: 26px;
   margin: 0 auto;
   border: none;
   border-radius: 25px;
