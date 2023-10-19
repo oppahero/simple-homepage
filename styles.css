@@ -61,6 +61,12 @@ nav {
   background-color: var(--bg-dark-color);
 }
 
+.hero-image {
+  order: -1;
+  width: 70%;
+  align-self: center;
+}
+
 .container-text {
   width: auto;
 }
@@ -114,12 +120,6 @@ nav {
 .container-text__checks li {
   margin-left: 8px;
   margin-right: 20px;
-}
-
-.hero-image {
-  order: -1;
-  width: 70%;
-  align-self: center;
 }
 
 .logo svg {
@@ -186,17 +186,6 @@ a.active,
   background-color: var(--bg-color);
 }
 
-.menu span {
-  width: 24px;
-  height: 3px;
-  border-radius: 2px;
-  -webkit-border-radius: 2px;
-  -moz-border-radius: 2px;
-  -ms-border-radius: 2px;
-  -o-border-radius: 2px;
-  background-color: var(--primary-color);
-}
-
 .mode {
   display: flex;
   justify-content: space-evenly;
@@ -210,6 +199,17 @@ a.active,
   -moz-border-radius: 25px;
   -ms-border-radius: 25px;
   -o-border-radius: 25px;
+  background-color: var(--primary-color);
+}
+
+.menu span {
+  width: 24px;
+  height: 3px;
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
   background-color: var(--primary-color);
 }
 
@@ -243,17 +243,25 @@ a.active,
 .dark .nav__ul {
   background: var(--primary-color);
 }
+
 .dark .mode {
   background: var(--bg-dark-color);
 }
+
 .dark .container-text__slogan,
 .dark .close {
   color: #fff;
 }
+
+.dark .menu {
+  background: var(--bg-dark-color);
+}
+
 .dark nav a.active,
 .dark .container-text__title {
   color: var(--bg-color);
 }
+
 .dark path:nth-child(3),
 .dark path:nth-child(4),
 .dark path:nth-child(5),
@@ -263,20 +271,19 @@ a.active,
 .dark path:nth-child(9) {
   fill: #fff;
 }
-.dark .menu {
-  background: var(--bg-dark-color);
-}
+
 .dark .menu span {
   background: #fff;
 }
 
 @media screen and (min-width: 550px) {
-  h1 {
-    font-size: 3.75rem;
-    line-height: 5.5rem;
-  }
   .container-text {
     width: 78%;
+  }
+
+  .container-text__title {
+    font-size: 3.75rem;
+    line-height: 5.5rem;
   }
 }
 
@@ -285,22 +292,31 @@ a.active,
     flex-direction: row;
     align-items: center;
   }
+
   .container-text,
   .hero-image {
     width: 50%;
     height: 50%;
   }
+
   .hero-image {
     order: 1;
     align-self: end;
   }
+
   .container-text__title {
     margin-right: 110px;
   }
+
   .menu,
   .close {
     display: none;
   }
+
+  .mode {
+    margin: 0 0 0 auto;
+  }
+
   .nav__ul {
     height: 26px;
     width: 65%;
@@ -316,20 +332,20 @@ a.active,
     -ms-transform: none;
     -o-transform: none;
   }
+
   .nav__li {
     font-size: 0.875rem;
     margin: 0;
   }
+
   .nav__li a {
     margin-right: 40px;
   }
-  .mode {
-    margin: 0 0 0 auto;
-  }
-  /* Change colors for Dark mode */
+
   .dark .nav__ul {
     background: transparent;
   }
+  
   .dark .mode {
     background: var(--primary-color);
   }
